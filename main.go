@@ -7,14 +7,6 @@ import (
 
 const port = ":8080"
 
-func Home(response http.ResponseWriter, request *http.Request) {
-	fmt.Fprint(response, "Hello world !")
-}
-
-func About(response http.ResponseWriter, request *http.Request) {
-	fmt.Fprint(response, "À propos de moi")
-}
-
 func main() {
 	http.HandleFunc("/", Home)
 	http.HandleFunc("/about", About)
